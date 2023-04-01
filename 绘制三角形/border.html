@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用border绘制三角形</title>
+    <style>
+      .origin {
+        width: 0;
+        height: 0;
+        border: 100px solid;
+        border-color: lightpink lightgreen lightblue orangered;
+      }
+      .ordinary-triangle {
+        width: 0;
+        height: 0;
+        border-right: 30px solid transparent;
+        border-bottom: 95px solid lightblue;
+        border-left: 75px solid transparent;
+      }
+      .right-triangle {
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid skyblue;
+        border-left: 100px solid transparent;
+      }
+      .equilateral-triangle {
+        width: 0;
+        height: 0;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid lightseagreen;
+        border-left: 100px solid transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="origin"></div>
+    <h1>ordinary triangle</h1>
+    <div class="ordinary-triangle"></div>
+    <h1>right triangle</h1>
+    <div class="right-triangle"></div>
+    <h1>equilateral triangle</h1>
+    <div class="equilateral-triangle"></div>
+  </body>
+</html>
