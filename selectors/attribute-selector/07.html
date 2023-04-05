@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS attribute selectors --- [attr*=value]</title>
+    <style>
+      /*
+        [attr*=value]
+        Represents elements with an attribute name of attr whose value contains
+        at least one occurrence of value within the string.
+      */
+      div[class*='item'] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- all red -->
+    <div class="item">div1</div>
+    <div class="item-1">div2</div>
+    <div class="todo-item">div3</div>
+    <div class="box item">div4</div>
+    <div class="item box">div5</div>
+  </body>
+</html>

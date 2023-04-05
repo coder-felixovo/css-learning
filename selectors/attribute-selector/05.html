@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS attribute selectors --- [attr^=value]</title>
+    <style>
+      /*
+        [attr^=value]
+        Represents elements with an attribute name of attr whose value is prefixed (preceded) by value.
+      */
+      div[class^='todo'] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      div1, div2, div3
+      color red
+     -->
+    <div class="todo">div1</div>
+    <div class="todo box">div2</div>
+    <div class="todo-item">div3</div>
+    <div class="box todo">div4</div>
+  </body>
+</html>

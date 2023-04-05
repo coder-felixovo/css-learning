@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS selectors --- descendant combinator</title>
+    <style>
+      /*
+        Descendant combinator
+        
+        The ""(space) combinator selects nodes that are descendant of the first element.
+
+        e.g.: `div span` will match all <span> elements that are inside a <div> element.
+      */
+      div span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>span1</span>
+    </div>
+    <div>
+      <span>span2</span>
+    </div>
+  </body>
+</html>

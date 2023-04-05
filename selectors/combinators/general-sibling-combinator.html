@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS selectors --- general sibling combinator</title>
+    <style>
+      /*
+        General sibling combinator
+
+        The ~ combinator  selects siblings. 
+        This means that the second element follows the first (though not necessarily immediately), 
+        and both share the same parent.
+
+        e.g.: `p ~ span` will match all <span> elements that follow a <p> element.
+      */
+      p ~ span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>p1</p>
+    <span>span1</span>
+    <div>
+      <span>span2</span>
+    </div>
+    <span>span3</span>
+  </body>
+</html>

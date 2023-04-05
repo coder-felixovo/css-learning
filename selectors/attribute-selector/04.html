@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS attribute selectors --- [attr|=value]</title>
+    <style>
+      /*
+        Represents elements with an attribute name of attr whose value can be exactly value
+        or can begin with value immediately followed by a hyphen
+      */
+      div[class|='todo'] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      div1 div2 div3
+      color red
+     -->
+    <div class="todo-item">div1</div>
+    <div class="todo">div2</div>
+    <div class="todo-item box">div3</div>
+    <div class="todo box">div4</div>
+    <div class="item-todo">div5</div>
+  </body>
+</html>

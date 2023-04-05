@@ -1,0 +1,39 @@
+/*  
+  Universal selector
+  Selects all elements. 
+*/
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* 
+  Type selector
+  Select all elements that have the given node name.
+  e.g.: div will match any <div> element.
+*/
+div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+/*
+  Class selector
+  Selects all elements that have the given class attribute.
+  e.g.: .box will match any element that has class="index".
+*/
+.box {
+  background-color: lightpink;
+}
+
+/*
+  ID selector
+  Selects an element based on the value of its id attribute.
+  There should be only one element with a given ID in document.
+  e.g.: #container will match the element that has id="container.
+*/
+#container {
+  color: red;
+}

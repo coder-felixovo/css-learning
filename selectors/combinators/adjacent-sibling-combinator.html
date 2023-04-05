@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS selectors --- adjacent sibling combinator</title>
+    <style>
+      /*
+        Adjacent sibling combinator
+
+        The + combinator matches the second element only if it immediately follow the first element.
+
+        e.g.: `span + p` will match the first <p> element that immediately follows an <span> element.
+      */
+      span + p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <span>span1</span>
+      <p>p1</p>
+      <p>p2</p>
+    </div>
+  </body>
+</html>
