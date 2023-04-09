@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>瀑布流-flex</title>
+    <style>
+      /* 去除默认样式 */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      /* 版心 */
+      .main {
+        width: 980px;
+        margin: 0 auto;
+      }
+
+      /* 瀑布流图片容器 */
+      .img-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 900px; /* 必须设置高度 */
+        counter-reset: count;
+      }
+
+      /* 单张图片容器 */
+      .img-wrap > li {
+        position: relative;
+        width: calc(100% / 3); /* 平均宽度 */
+        padding-right: 10px;
+        margin-bottom: 10px;
+      }
+
+      /* 图片 */
+      .img-wrap > li > img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* 伪元素 */
+      .img-wrap > li::after {
+        counter-increment: count;
+        content: counter(count);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 20px;
+        height: 20px;
+        background-color: lightpink;
+        line-height: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="web">
+      <div class="main">
+        <ul class="img-wrap">
+          <li>
+            <img
+              src="https://tse1-mm.cn.bing.net/th/id/OIP-C.yGLJWVBYPrJQQsRc_sMcdgHaEq?w=249&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://tse2-mm.cn.bing.net/th/id/OIP-C.9O3IXd0pTOT5qYd_0U-TpwHaEK?w=279&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://tse2-mm.cn.bing.net/th/id/OIP-C.KhDCTF-xKtnAPAsfrJ6VxwHaFB?w=207&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://tse4-mm.cn.bing.net/th/id/OIP-C.Sm13bo_sZ5kUNNPCxaHT4wAAAA?w=284&h=140&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://tse1-mm.cn.bing.net/th/id/OIP-C.vECvp2xor27UWAqPcynTkQHaEJ?w=296&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://tse2-mm.cn.bing.net/th/id/OIP-C.U7Rl4JXjUkDce34djtFNdgHaEK?w=293&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://tse3-mm.cn.bing.net/th/id/OIP-C.ZseiLxHvNyJ1DIsNBBzm2wHaE9?w=267&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://tse3-mm.cn.bing.net/th/id/OIP-C.PEwBWKKjjYR2Qd3jlaNsCgHaEF?w=315&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://tse3-mm.cn.bing.net/th/id/OIP-C.GvRB7JMORviZiyw-eZDo4wHaEJ?w=288&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://tse4-mm.cn.bing.net/th/id/OIP-C.9JMyj1Sp5YvR28Z9Ho4OtAHaE6?w=247&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
